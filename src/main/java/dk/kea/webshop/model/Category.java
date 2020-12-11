@@ -17,4 +17,20 @@ public class Category {
     @ManyToMany(mappedBy = "categories", cascade = CascadeType.ALL)
     @JsonIgnore
     private Set<Product> products;
+
+    public Category() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Set<Product> getProducts() {
+        return products;
+    }
+
 }
